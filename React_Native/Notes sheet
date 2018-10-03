@@ -1,0 +1,125 @@
+React is more of a library than a framework. It is not a complete solution for app development. Instead it is a view-layer solution with some mechanisms for maintaining internal state and has no opinion on solutions for data flow and management, server communication, routing, or other concerns.
+
+Often react is paired with the application architecture FLUX.
+
+The foundational building block of React is the component
+
+React keeps a respresentation of the DOM in memory (virtual DOM) and makes all alterations there. 
+
+
+# JavaScript
+
+bind(): the bind method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+
+
+#FLUX
+
+
+
+
+
+
+JSX:
+
+    JSX and HTML5 are similiar in that they are both descendants of XML
+
+    Self Closing Tags EXAMPLE
+        * HTML5: <img src="my/image.jpg>
+        * JSX: <img src="my/image.jpg/> * required closing / *
+   
+    Class Keyword - class is a keyword in JS so class keyword is changed for JSX
+        * HTML5: <class="news-item">
+        * JSX: <className="news-item">
+
+    We can use JSON within markups instead of strings
+        * HTML5: <div styles="background: green; color: red;">
+        * JSX: <div styles={{background 'green', color 'red'}}>
+    
+    We can control dynamic content in JSX
+        * HTML5: <span>Hello World</span>
+        * JSX: <span>{'Hello' + 'World'}<span/>
+    
+    You may add tags based on application components in JSX
+        * JSX: <NewsItem>Hello React!<NewsItem>
+
+
+
+
+
+
+Concepts:
+
+
+
+REACT COMPONENTS
+    Declaritive description of some visual feature on the page. (forms, menus, etc.)
+
+        *   Modular components - When creating a news feed component sub components are broken down as  follows
+            > News feed: made of : News Items
+            >> News Items: made of: Image, Title, Description, Byline
+        *   Every react component has an optional special property that is called children
+
+    Component Properties(Props)
+        * Props allow for components to be dynamic
+
+        * Proptypes are how we formally tell other devlopers what properties a component accepts and what value types those properties should be. They come with different functions for validating data of different type values such as string, number, function etc
+
+    Event Handling 
+        * Elements are what we see on the screen const element = <tag> Content </tag>
+        * For an event handler we can do something like this <form onSubmit= {validateForm}>
+
+    
+  Lifecycle Methods
+    Mount:
+
+        > constructor()
+            * Can be placed before render at the top of the component class to perform operations like setting up state the first time a component is created.
+        > componentWillMount()
+            * This method will be called before the render method and can be used to set up any data that a component will need before its render like starting a component interval
+        > componentDidMount()
+            * After rendering the component this method can be called often for integration with non react libraries
+
+    Update: These methods will continue cyclically until the component is unmounted or removed.
+
+        > componentWillReceiveProps(nextProps)
+            * This method can be used to update a component's state that is derived from props. The component recieves a new set of props and we can compare within this method the new props vs the old.
+        > shouldComponentUpdate()
+            * This is the only lifecycle method that expects a return value (T/F). If true this method allows the update cycle to continue, if false the re-render does not occur. If not defined React assumes this to be true. This method can be used in large applications to fine tune uneccessary rendering and reduce stuttering.
+        > componentWillUpdate(nextProps, nextState)
+            * If shouldComponentUpdate() returns true, this method is called as a last step before re-render. Here we have access to the new props and the new state to prepare for the render in any way we see fit
+        > componentDidUpdate(prevProps, prevState)
+            * This method receives the previous props after this.props is set to nextProps. We can use this method to check that everything has updated properly and the state/props have changed according to plan.
+
+    Unmount:
+        
+        > componentWillUnmount()
+            * This is a good place to clean up any intervals or state changes that were enacted in componentWillMount() just before the component is unmounted
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Component Composition -
+
+
+
+
+
+Component State - 
+
+React Component Lifecycle -
+
+Alternate Component Forms -
+
+
+
+JSX - JavaScript/ HTML hybrid used to describe React Components
