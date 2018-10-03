@@ -25,4 +25,32 @@
 
 #### The Second Normal Form
 
-* No partial functional dependencies:  
+* No partial functional dependencies: All of the non-key columns are dependent on the table's primary key, and are effective in describing what that entry represents. Tables in the second normal form have a clear, singular purpose in representing the entity they describe. 
+  
+![alt text][2NF]
+
+[2NF]: https://277dfx2bm2883ohl6u2g3l59-wpengine.netdna-ssl.com/wp-content/uploads/2014/06/SecondNormalFormIssues-294x300.png "2NF"
+
+We can fix the database by creating a SalesStaffInformation table, and Sales Office table and removing the Employee ID from the Customer table, and the Sales Office fields. Within the SSI table, we place the Employee ID and related fields, like their name, and the office they work in as a foreign key creating a relationship to the SO table. Inside of the SO table, we place the name of the office and the office number because these fields describe that key. Finally we create an **intersection table** (a table made entirely of keys) that describes how each employee is related to each customer.
+
+![alt text][_2NF]
+
+[_2NF]: https://277dfx2bm2883ohl6u2g3l59-wpengine.netdna-ssl.com/wp-content/uploads/2014/06/SecondNormalFormDataModel.png "_2NF"
+
+#### The Third Normal Form
+
+*   No transitive functional dependencies: A column is transitively dependent when its value relies on another column's value through a second intermediate column's value. C determines B determines A. in the case of B and A, a person's BMI determines whether or not they are overweight. It would not make sense to have isOverweight as a boolean field within the table since BMI determines that field, and isOverweight is a functional derivative of it. To have a database in the third normal form, it is important that each fields value not be compromised by another fields value. Customers have a city and a postal code. Updating the customers postal code without updating the customers city would cause data to be incorrect and invalidate that entry. Instead we can have a separate table for the Postal code which determines the city they live in, and have that table be a FK in the Customer Table
+
+![alt-text][3NF]
+
+[3NF]:
+https://277dfx2bm2883ohl6u2g3l59-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/ThirdNormalFormIssues.png "3NF"
+
+
+![alt-text][_3NF]
+
+[_3NF]:
+https://277dfx2bm2883ohl6u2g3l59-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/ThirdNormalFormDataModel.png "_3NF"
+
+
+
