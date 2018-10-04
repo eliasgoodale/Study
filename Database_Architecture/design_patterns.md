@@ -4,7 +4,7 @@
 
 * Candidate key: A key created as a superset of two or more fields such that the relation does not have two records with the candidate key value, meaning that two or more of the records have the same values for the fields used to create the candidate key.
 
-* Functional dependency (FD): In a relation **R**, a set of attributes **X** in **R** is said to functionally determine another set of attributes **Y** also within **R**, iff each value **X** in **R** is associated with one value in Y. If the values for **X** attributes are known, then the values of **Y** can be determined by looking at any tuple of **R** containing **X**. For example, in a table of cars vin number **V** functionally determines the cars engine capacity **C**, because that make, model, type, and code of vehicle (summarized by its VIN number) may only have one engine capacity (**V** -> **C**). To summarize, a field in a table functionally determines another, whenever that field's unique value corresponds 1 to 1 with another field's value, and those two values are always the same.
+* Functional dependency (FD): In a relation **R**, a set of attributes **X** in **R** is said to functionally determine another set of attributes **Y** also within **R**, iff each value **X** in **R** is associated with one value in Y. If the values for **X** attributes are known, then the values of **Y** can be determined by looking at any tuple of **R** containing **X**. For example, in a table of cars vin number **V** functionally determines the cars engine capacity **C**, because that unique vehicle may only have one specific engine capacity (**V** -> **C**) and not another. To summarize, a field in a table functionally determines another, whenever that field's unique value corresponds 1 to 1 with another field's value, and those two values are always the same.
 
 * Trivial FD:  Given a set S, {A, B} and FD, {A, B} -> B is a trivial functional dependency because B is a **subset** of {A,B}. When creating a table for Employees the PK is Employee_ID. Given that Employee_Name is a field in the table {Employee_ID, Employee_Name} -> Employee_ID is a **trivial FD**. A -> A is trivial as well.
 
@@ -59,3 +59,32 @@ https://277dfx2bm2883ohl6u2g3l59-wpengine.netdna-ssl.com/wp-content/uploads/2014
 #### The Fourth Normal Form
 
 Every non-trivial, multi-value dependency has a superkey: When considering a list of pizza delivery restaurants we can identify that each restaurant has a delivery area and a list of pizza varieties that it offers. If each one of the restaurants delivers the same type of pizza, the information can be put all in one table. However, if each restaurant does not have the same menu available at each one of its delivery areas, there are two non-trivial relationships {Restaurant} -> {Pizza Variety}, and  {Restaurant} -> {Delivery Area}. Since restaurant is not a superkey and it has two non-trivial relationships we can say that a restaurants menu is independent from its delivery area because that menu changes based on the delivery area and the restaurant itself.
+
+
+#### The Fifth Normal Form
+
+
+
+#### The Sixth Normal Form
+
+### Pattern Structure
+
+    A design problem is a situation where the designer needs to map user requirements or conceptual-level constructs to logical or physical constructs in the database. A design pattern or solution is a response to the problem. The following is a list of attributes for the process of selecting a pattern based on the problem given
+
+#### Motivation
+> The motivation discusses the situation that is puzzling for the designer. In this section we contextualize and analyze the problem parameters
+
+#### Alternative Solutions
+> The answers to the problem. Design patterns are presented as solutions, each of which should incorporate a definition of the chosen schema, and an illustrative example at the schema and instance level.
+
+#### Developer Interface
+> This describes how we can guarantee that our applications have access to our data via our schema. The pattern must include an API-like mechanism that allows our schema to evolve and change over time with as little maintanence as possible and giving us the ability to determine what an application needs to interface with it.
+
+#### Instance Level Behavior
+> Each database can have multiple instances that access it. Their behavior is described by the management of insertion, deletion, and updates of tuples in the database and is a dynamic property.
+
+#### Schema Level Behavior
+> 
+
+
+
