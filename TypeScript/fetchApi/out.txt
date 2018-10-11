@@ -1,0 +1,44 @@
+fetchExample.ts(3,25): error TS2705: An async function or method in ES5/ES3 requires the 'Promise' constructor.  Make sure you have a declaration for the 'Promise' constructor or include 'ES2015' in your `--lib` option.
+node_modules/@types/core-js/index.d.ts(39,27): error TS2304: Cannot find name 'IterableIterator'.
+node_modules/@types/core-js/index.d.ts(231,38): error TS2304: Cannot find name 'IterableIterator'.
+node_modules/@types/core-js/index.d.ts(236,35): error TS2304: Cannot find name 'IterableIterator'.
+node_modules/@types/core-js/index.d.ts(241,37): error TS2304: Cannot find name 'IterableIterator'.
+node_modules/@types/core-js/index.d.ts(354,33): error TS2304: Cannot find name 'IterableIterator'.
+node_modules/@types/core-js/index.d.ts(355,31): error TS2304: Cannot find name 'IterableIterator'.
+node_modules/@types/core-js/index.d.ts(356,34): error TS2304: Cannot find name 'IterableIterator'.
+node_modules/@types/core-js/index.d.ts(436,13): error TS2339: Property 'iterator' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(436,26): error TS2304: Cannot find name 'IterableIterator'.
+node_modules/@types/core-js/index.d.ts(471,42): error TS2304: Cannot find name 'IterableIterator'.
+node_modules/@types/core-js/index.d.ts(737,42): error TS2304: Cannot find name 'IterableIterator'.
+node_modules/@types/core-js/index.d.ts(738,39): error TS2304: Cannot find name 'IterableIterator'.
+node_modules/@types/core-js/index.d.ts(739,41): error TS2304: Cannot find name 'IterableIterator'.
+node_modules/@types/core-js/index.d.ts(825,16): error TS2304: Cannot find name 'MapConstructor'.
+node_modules/@types/core-js/index.d.ts(826,16): error TS2304: Cannot find name 'SetConstructor'.
+node_modules/@types/core-js/index.d.ts(827,20): error TS2304: Cannot find name 'WeakMapConstructor'.
+node_modules/@types/core-js/index.d.ts(828,20): error TS2304: Cannot find name 'WeakSetConstructor'.
+node_modules/@types/core-js/index.d.ts(829,20): error TS2304: Cannot find name 'PromiseConstructor'.
+node_modules/@types/core-js/index.d.ts(848,53): error TS2583: Cannot find name 'Iterator'. Do you need to change your target library? Try changing the `lib` compiler option to es2015 or later.
+node_modules/@types/core-js/index.d.ts(1486,36): error TS2339: Property 'for' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(1490,43): error TS2339: Property 'hasInstance' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(1494,50): error TS2339: Property 'isConcatSpreadable' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(1498,40): error TS2339: Property 'iterator' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(1502,38): error TS2339: Property 'keyFor' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(1506,37): error TS2339: Property 'match' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(1510,39): error TS2339: Property 'replace' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(1514,38): error TS2339: Property 'search' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(1518,39): error TS2339: Property 'species' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(1522,37): error TS2339: Property 'split' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(1526,43): error TS2339: Property 'toPrimitive' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(1534,43): error TS2339: Property 'unscopables' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(2305,36): error TS2339: Property 'for' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(2309,43): error TS2339: Property 'hasInstance' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(2313,50): error TS2339: Property 'isConcatSpreadable' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(2317,40): error TS2339: Property 'iterator' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(2321,38): error TS2339: Property 'keyFor' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(2325,37): error TS2339: Property 'match' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(2329,39): error TS2339: Property 'replace' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(2333,38): error TS2339: Property 'search' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(2337,39): error TS2339: Property 'species' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(2341,37): error TS2339: Property 'split' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(2345,43): error TS2339: Property 'toPrimitive' does not exist on type 'SymbolConstructor'.
+node_modules/@types/core-js/index.d.ts(2353,43): error TS2339: Property 'unscopables' does not exist on type 'SymbolConstructor'.
