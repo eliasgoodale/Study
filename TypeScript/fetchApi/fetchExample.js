@@ -36,11 +36,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 var _this = this;
 var API_URL = "https://jsonplaceholder.typicode.com/todos/";
 var myFetch = function (url) { return __awaiter(_this, void 0, void 0, function () {
-    var data;
+    var response, data;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, fetch(url)];
-            case 1: return [4 /*yield*/, (_a.sent()).json()];
+            case 1:
+                response = _a.sent();
+                return [4 /*yield*/, response.json()];
             case 2:
                 data = _a.sent();
                 console.log(data);

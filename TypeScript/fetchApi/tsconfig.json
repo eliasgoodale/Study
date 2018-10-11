@@ -1,19 +1,24 @@
 {
 	"compilerOptions": {
-		"lib": ["es2015", "dom"],
-		"target": "es2015",
+		"lib": [
+			"es2015",
+			"dom"
+		],
+		"target": "es5",
 		"module": "commonjs",
 		"declaration": false,
 		"noImplicitAny": false,
 		"sourceMap": true,
 		"noLib": false,
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
 		"suppressImplicitAnyIndexErrors": true,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"moduleResolution": "node",
 		"allowJs": false
 	},
-	"compileOnSave": false,
+	"compileOnSave": true,
 	"exclude": [
 		"node_modules"
 	]
