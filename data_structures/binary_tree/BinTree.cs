@@ -1,6 +1,7 @@
 using System;
 
 namespace BinaryTree {
+    
     public class Node 
     {
         public int data { get; set; }
@@ -16,9 +17,9 @@ namespace BinaryTree {
     }
 
     public class BinaryTree {
-
-
+        
         public Node Root { get; }
+
         public BinaryTree(int[] values) 
         {
             this.Root = this.BuildTree(this.Root, values, 0);
@@ -67,7 +68,7 @@ namespace BinaryTree {
     }
 
     public delegate void Del<T>(T param);
-    
+
     public class Program
     {
 
