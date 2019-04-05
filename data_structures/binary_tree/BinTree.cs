@@ -14,6 +14,7 @@ namespace BinaryTree {
             this.Right = null;
         }
     }
+
     public class BinaryTree {
 
 
@@ -64,7 +65,9 @@ namespace BinaryTree {
             }
         }
     }
+
     public delegate void Del<T>(T param);
+    
     public class Program
     {
 
