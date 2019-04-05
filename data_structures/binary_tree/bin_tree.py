@@ -51,10 +51,3 @@ print()
 btree.apply_inorder(btree.root, print_node)
 print()
 btree.apply_postorder(btree.root, print_node)
-
-
-#print(btree.root, btree.left.root, btree.right.root)
-
-
-# values = [0, 1, 2]
-# print(values[1:])
