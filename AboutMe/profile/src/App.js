@@ -70,8 +70,8 @@ const StoryContainer = props => {
 class App extends React.Component {
   state = {
     value: 0,
-    titles: ["At UTSA", "Carpentry", "Oil Field Technition", "Computer Science"],
-    storyTexts: [aboutMe.utsa, aboutMe.carpentry, aboutMe.oilField, aboutMe.fortyTwo]
+    titles: ["Carpentry", "Oil Field Technition", "Computer Science"],
+    storyTexts: [aboutMe.carpentry, aboutMe.oilField, aboutMe.fortyTwo]
   };
 
   handleChange = (event, value) => {
@@ -92,7 +92,6 @@ class App extends React.Component {
           textColor="primary"
           variant="fullWidth"
           >
-          <Tab label="At UTSA" />
           <Tab label="Carpentry" />
           <Tab label="Oil Field Technition" />
           <Tab label="Computer Scientist" />
