@@ -4,15 +4,45 @@
 int main()
 {
     int size = 5;
-    int *values = create_integer_array(size);
-    Node *root = binary_tree(NULL, values, 0, size);
+    int unsorted_values[5] = {22,3,1,66,4};
+    Node *sorted_root = sorted_binary_tree(unsorted_values, size);
     
-    
-    preorder_apply(root, print_value);
-    inorder_apply(root, print_value);
-    postorder_apply(root, print_value);
+    preorder_apply(sorted_root, print_value);
+    printf("\n");
+    inorder_apply(sorted_root, print_value);
+    printf("\n");
+    postorder_apply(sorted_root, print_value);
 
     return (0);
+}
+
+Node *insert(Node *node, int value)
+{
+    if (node == NULL)
+    {
+        return new_node(value);
+    }
+    if (value <= node->data)
+    {
+        node->left = insert(node->left, value);
+    }
+    else if (value > node->data)
+    {
+        node->right = insert(node->right, value);
+    }
+    return node;
+}
+
+Node *sorted_binary_tree(int *values, int size)
+{
+    Node *root = NULL; 
+    root = insert(root, values[0]);
+
+    for (int i = 1; i < size; i++ )
+    {
+        insert(root, values[i]);
+    }
+    return root;
 }
 
 Node *binary_tree(Node *root, int *values, int i, int size)

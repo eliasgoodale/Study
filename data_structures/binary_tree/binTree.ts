@@ -7,13 +7,18 @@ class _Node {
 
 class BinaryTree {
     private _root: _Node;
-
+    private _sortedRoot: _Node;
     get root(): _Node {
         return this._root;
+    }
+    get sortedRoot(): _Node {
+        return this._sortedRoot;
     }
 
     constructor(values: number[] = []){
         this._root = this.build_tree(this._root, values, 0);
+        this._sortedRoot = this.build_tree_sorted(this._sortedRoot, values);
+
     }
 
     private build_tree(node: _Node, values: number[], itr: number): _Node {
@@ -23,6 +28,28 @@ class BinaryTree {
             node.right = this.build_tree(node.right, values, itr * 2 + 2);
         }
         return node;
+    }
+
+    private insert(node: _Node, value: number): _Node {
+        if (node == null) {
+            return new _Node(value);
+        }
+        if (value <= node.data) {
+            node.left = this.insert(node.left, value);
+        }
+        else if (value > node.data){
+            node.right = this.insert(node.right, value);
+        }
+        return node;
+    }
+
+    private build_tree_sorted(root: _Node, values: number[]): _Node {
+        root = null
+        root = this.insert(root, values[0])
+        for(let i: number = 1; i < values.length; i++){
+            this.insert(root, values[i])
+        }
+        return root;
     }
 
     public apply_preorder(node: _Node, fn: (node: _Node) => void) {
@@ -58,13 +85,13 @@ function print_node_value(node:_Node): void {
 }
 
 
-var values = [1, 2, 3, 4, 5]
+var values = [1, 1, 1, 1, 1]
 
 const btree = new BinaryTree(values);
 
-btree.apply_preorder(btree.root, print_node_value);
+btree.apply_preorder(btree.sortedRoot, print_node_value);
 console.log()
-btree.apply_inorder(btree.root, print_node_value);
+btree.apply_inorder(btree.sortedRoot, print_node_value);
 console.log()
-btree.apply_postorder(btree.root, print_node_value);
+btree.apply_postorder(btree.sortedRoot, print_node_value);
 

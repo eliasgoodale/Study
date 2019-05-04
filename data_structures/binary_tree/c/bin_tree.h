@@ -14,10 +14,12 @@ typedef struct s_node
 }               Node;
 
 Node *binary_tree(Node *root, int *values, int i, int size);
+Node *sorted_binary_tree(int *values, int size);
 Node *new_node(int data);
 int *create_integer_array(int size);
 void print_value(Node *n);
 void inorder_apply(Node *root, void (*f)(Node *n));
 void preorder_apply(Node *root, void(*fn)(Node *n));
+void postorder_apply(Node *root, void(*fn)(Node *n));
 
 #endif

@@ -19,10 +19,11 @@ namespace BinaryTree {
     public class BinaryTree {
         
         public Node Root { get; }
-
+        public Node SortedRoot { get; }
         public BinaryTree(int[] values) 
         {
             this.Root = this.BuildTree(this.Root, values, 0);
+            this.SortedRoot = this.BuildTreeSorted(this.SortedRoot, values);
         }
 
         private Node BuildTree(Node node, int[] values, int itr) 
@@ -34,6 +35,34 @@ namespace BinaryTree {
                 node.Right = this.BuildTree(node.Right, values, itr * 2 + 2);
             }
             return node;
+        }
+
+        private Node Insert(Node node, int value)
+        {
+            if (node == null)
+            {
+                return new Node(value);
+            }
+            if (value <= node.data)
+            {
+                node.Left = this.Insert(node.Left, value);
+            }
+            else if (value > node.data) 
+            {
+                node.Right = this.Insert(node.Right, value);
+            }
+            return node;
+        }
+
+        private Node BuildTreeSorted(Node Root, int[] values)
+        {
+             Root = null;
+             Root = this.Insert(Root, values[0]);
+             for(int i = 1; i < values.Length; i++)
+             {
+                 this.Insert(Root, values[i]);
+             }
+             return Root;
         }
 
         public void PreorderApply(Node node, Del<Node> Callback)
@@ -85,7 +114,7 @@ namespace BinaryTree {
 
             Btree.PreorderApply(Btree.Root, Callback);
             Console.WriteLine();
-            Btree.InorderApply(Btree.Root, Callback);
+            Btree.InorderApply(Btree.SortedRoot, Callback);
             Console.WriteLine();
             Btree.PostOrderApply(Btree.Root, Callback);
         }
